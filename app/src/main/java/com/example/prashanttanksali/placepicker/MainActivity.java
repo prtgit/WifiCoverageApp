@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.net.wifi.WifiManager;
+import android.net.wifi.ScanResult;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtLatitude;
     private TextView txtLongitude;
     private TextView txtAddress;
+    private WifiManager mWifiManager;
 
     int PLACE_PICKER_REQUEST = 1;
     @Override

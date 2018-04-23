@@ -27,7 +27,7 @@
         android:layout_alignStart="@+id/btnGetPlace"
         android:layout_below="@+id/btnGetPlace"
         android:layout_marginTop="20dp"
-        android:text="Place Name: " />
+        android:text="Place: " />
 
     <TextView
         android:id="@+id/txtLat"
@@ -53,8 +53,9 @@
         android:id="@+id/txtPlaceName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/txtPlcNm"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginStart="170dp" />
 
     <TextView
         android:id="@+id/txtLatitude"
@@ -77,10 +78,9 @@
         android:id="@+id/txtAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtLat"
-        android:layout_alignRight="@+id/txtLat"
-        android:layout_below="@+id/txtLong"
-        android:layout_marginTop="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnGetPlace"
+        android:layout_marginBottom="204dp"
         android:text="Address: " />
 
     <TextView
