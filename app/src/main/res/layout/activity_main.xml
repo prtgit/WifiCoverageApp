@@ -30,26 +30,6 @@
         android:text="Place: " />
 
     <TextView
-        android:id="@+id/txtLat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtPlcNm"
-        android:layout_alignStart="@+id/txtPlcNm"
-        android:layout_below="@+id/txtPlcNm"
-        android:layout_marginTop="29dp"
-        android:text="Latitude: " />
-
-    <TextView
-        android:id="@+id/txtLong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Longitude: "
-        android:layout_below="@+id/txtLat"
-        android:layout_alignLeft="@+id/txtLat"
-        android:layout_alignStart="@+id/txtLat" />
-
-    <TextView
         android:id="@+id/txtPlaceName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,36 +38,49 @@
         android:layout_marginStart="170dp" />
 
     <TextView
-        android:id="@+id/txtLatitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/txtLong"
-        android:layout_alignEnd="@+id/txtPlaceName"
-        android:layout_alignRight="@+id/txtPlaceName" />
-
-    <TextView
-        android:id="@+id/txtLongitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtLong"
-        android:layout_alignBottom="@+id/txtLong"
-        android:layout_toEndOf="@+id/txtAddress"
-        android:layout_toRightOf="@+id/txtAddress" />
-
-    <TextView
         android:id="@+id/txtAddr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/btnGetPlace"
-        android:layout_marginBottom="204dp"
+        android:layout_marginTop="165dp"
         android:text="Address: " />
 
     <TextView
         android:id="@+id/txtAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtAddr"
-        android:layout_alignLeft="@+id/txtLatitude"
-        android:layout_alignStart="@+id/txtLatitude" />
+        android:layout_alignStart="@+id/txtPlaceName"
+        android:layout_alignTop="@+id/txtAddr" />
+
+    <TextView
+        android:id="@+id/txtSS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btnGetPlace"
+        android:layout_marginTop="206dp"
+        android:text="WiFI SSID:" />
+
+    <TextView
+        android:id="@+id/txtSSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPlaceName"
+        android:layout_alignTop="@+id/txtSS" />
+
+    <TextView
+        android:id="@+id/txtSignalStrngth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnGetPlace"
+        android:layout_centerVertical="true"
+        android:text="Coverage:" />
+
+    <TextView
+        android:id="@+id/txtRSSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPlaceName"
+        android:layout_centerVertical="true" />
 </RelativeLayout>
