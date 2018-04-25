@@ -6,14 +6,24 @@ import models.LocationSignalPackage;
 import play.*;
 import play.mvc.*;
 
+import scala.Function1;
+import scala.Function2;
+import scala.PartialFunction;
+import scala.Tuple2;
+import scala.collection.*;
+import scala.collection.generic.CanBuildFrom;
+import scala.collection.immutable.Iterable;
+import scala.collection.immutable.LinearSeq;
+import scala.collection.immutable.Seq;
+import scala.collection.immutable.Traversable;
+import scala.util.parsing.json.JSONArray;
 import views.html.*;
 
 import java.io.File;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class Application extends Controller {
 
@@ -50,6 +60,31 @@ public class Application extends Controller {
         }
 
 
+        return ok(responseJson);
+    }
+    public Result getLocationDetails(){
+        Connection conn = connect();
+        ObjectNode responseJson = play.libs.Json.newObject();
+        String output ="";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM LocationSignal;");
+            ResultSet rs= pstmt.executeQuery();
+
+            while (rs.next()){
+
+                output += rs.getLong(1)+",";
+                for(int i=2;i<=5;i++){
+                    output += rs.getString(i)+",";
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(output.length()>0)
+            responseJson.put("output",output.substring(0,output.length()-1));
+        else
+            responseJson.put("output","");
         return ok(responseJson);
     }
 

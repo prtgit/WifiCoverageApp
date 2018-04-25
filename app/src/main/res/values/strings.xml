@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PlacePicker</string>
     <string name="google_place_api">AIzaSyDU_etfRnnrFswWPW3z0_pyOYfut6r9ajE</string>
+    <string name="google_maps_api">AIzaSyA9Uuu7PC-g-Jds1GWnBxqAT1QO5ZucwYU</string>
 </resources>

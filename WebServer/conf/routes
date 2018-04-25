@@ -9,3 +9,5 @@ GET     /                           controllers.Application.index
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 POST    /sendLocationDetails        controllers.Application.postLocationSignalDetails
+
+GET     /getLocationDetails         controllers.Application.getLocationDetails
